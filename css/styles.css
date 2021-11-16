@@ -139,14 +139,11 @@ body{
     height: 1000px;
 }
 
-.right-heading img{
-    background: var(--black);
-    width: 36px;
-    padding: 7px;
-    border-radius: 17px;
-    float: left;
-    display: inline-block;
-    margin-top: -6px;
+.right-heading{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
 }
 
@@ -158,12 +155,13 @@ body{
     text-transform: uppercase;
     font-size: 18px;
     font-weight: bolder;
-    margin-left: 50px;
+    margin-left: 20px;
     line-height: 18px;
 }
 
 .p3{
     margin-top: 20px;
+    margin-bottom: 50px;
     color: var(--Ligthgray);
     text-align: justify;
     word-spacing: -4px;
@@ -278,3 +276,10 @@ i{
     margin-bottom: 10px;
 }
 
+.icon{
+    margin-left: 25px;
+}
+
+.studies-container{
+    margin-bottom: 50px;
+}
