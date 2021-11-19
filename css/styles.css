@@ -1,25 +1,106 @@
 :root{
---bgcolor:#beb8ac; 
---purple:#c233ee6b;
---black: #3D3F42;
---white:#f4f7ff;
---gray:#d8dce4;
---Ligthgray: #8e9095;
-    
-}
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: monospace;
-}
-
-body{
+    --bgcolor:#beb8ac; 
+    --purple:#c233ee6b;
+    --black: #3D3F42;
+    --white:#f4f7ff;
+    --gray:#d8dce4;
+    --Ligthgray: #8e9095;
+        
+    }
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body{
     background: var(--bgcolor);
+ 
+    /* Modo oscuro*/
 }
-
-.clearfix{
+body.dark {
+    background: #111111;
+  }
+  p {
+    color: #222222;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .switch {
+    background-color: #343d5b;
+    border-radius: 9000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+    width: 80px;
+    height: 40px;
+  }
+  
+.switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .switch.active {
+    background: orange;
+    color: #000;
+  }
+  
+  .switch.active::after {
+    right: 0;
+    left: unset;
+  }
+  
+  .switch span {
+    width: 40px;
+    height: 30px;
+    line-height: 10px;
+    display: block;
+    background: none;
+    color: #fff;
+  }
+  .switch::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .switch.active {
+    background: orange;
+    color: #000;
+  }
+ 
+ 
+  /*Estilos pagina*/
+ 
+  .clearfix{
     clear: both;
 }
 .resume-box{
@@ -29,7 +110,7 @@ body{
     background: var(--white);
     box-shadow: 5px 21px 20px 20px #3d3f4238;
 }
-
+ 
 .left-section{
     background: var(--black);
     width: 350px;
@@ -40,7 +121,7 @@ body{
     overflow: hidden;
     position: relative;
 }
-
+ 
 .purple-box{
     width: 257px;
     height: 407px;
@@ -49,7 +130,6 @@ body{
     transform: rotateZ(60deg);
     margin-top: -178px;
 }
-
 .profile img{
     position: absolute;
     z-index: 9;
@@ -60,9 +140,9 @@ body{
     top: 50%;
     border-radius: 50%;
     border: 3px solid var(--gray);
-
+ 
 }
-
+ 
 .name{
  color: var(--gray);
  text-align: center;
@@ -72,12 +152,11 @@ body{
  font-weight: 400;
  text-transform: uppercase;
 }
-
 .name span{
     color: var(--purple);
-
+ 
 }
-
+ 
 .n-p{
     width: 180px;
     margin: 0 auto;
@@ -89,11 +168,10 @@ body{
     margin-top: 11px;
     text-transform: uppercase;
 }
-
+ 
 .info{
     margin-top: 50px;
 }
-
 .heading{
     width: 180px;
     margin: 0 auto;
@@ -106,7 +184,7 @@ body{
     text-transform: uppercase;
     font-size: 18px;
 }
-
+ 
 .p1{
     color: var(--gray);
     width: 184px;
@@ -115,12 +193,12 @@ body{
     font-size: 15px;
     line-height: 14px;
 }
-
+ 
 .p1 span{ 
     font-size: 12px;
-
+ 
 }
-
+ 
 .span1 img{
     background: white;
     width: 30px;
@@ -128,9 +206,8 @@ body{
     border-radius: 16px;
     float: left;
     margin-right: 10px;
-
+ 
 }
-
 .right-section{
     padding: 40px 30px;
     background: var(--white);
@@ -138,15 +215,17 @@ body{
     float: left;
     height: 1000px;
 }
-
+ 
+ 
+ 
 .right-heading{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
+ 
 }
-
+ 
 .p2{
     margin:0 auto;
     padding: 2px;
@@ -158,54 +237,51 @@ body{
     margin-left: 20px;
     line-height: 18px;
 }
-
+ 
 .p3{
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: var(--black);
     text-align: justify;
-    word-spacing: -6px;
+    word-spacing: 0.4em ;
 }
-
+ 
 .left{
     width: 25%;
     float: left;
 }
-
 .right{
     width: 75%;
     float: left;
-
+ 
 }
-
+ 
 .lr-box{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 .p4{
     font-size: 14px;
     font-weight: 600;
 }
-
+ 
 .p5{
     font-size: 12px;
     color: var(--Ligthgray);
 }
-
 .s-box{
     width: 50%;
     float: left;
     padding: 20px 20px 20px 0px;
 }
-
+ 
 #progress{
     background: #333;
     border-radius: 13px;
     height: 8px;
     width: 100%;
 }
-
+ 
 #progress:after{
     content: '';
     display: block;
@@ -214,14 +290,13 @@ body{
     height: 100%;
     border-radius: 9px;
 }
-
 #progress1{
     background: #333;
     border-radius: 13px;
     height: 8px;
     width: 100%;
 }
-
+ 
 #progress1:after{
     content: '';
     display: block;
@@ -230,14 +305,13 @@ body{
     height: 100%;
     border-radius: 9px;
 }
-
+ 
 #progress2{
     background: #333;
     border-radius: 13px;
     height: 8px;
     width: 100%;
 }
-
 #progress2:after{
     content: '';
     display: block;
@@ -246,14 +320,14 @@ body{
     height: 100%;
     border-radius: 9px;
 }
-
+ 
 #progress3{
     background: #333;
     border-radius: 13px;
     height: 8px;
     width: 100%;
 }
-
+ 
 #progress3:after{
     content: '';
     display: block;
@@ -261,26 +335,25 @@ body{
     width: 50%;
     height: 100%;
     border-radius: 9px;
-
+ 
 }
-
 i{
     font-size: 35px;
     color: var(--purple);
-    margin-bottom: 10px;
+    margin-bottom: -3px;
  }
-
-
-.p6{
+ .p6{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+ 
 .icon{
     margin-left: 25px;
 }
-
+ 
 .studies-container{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
+
+
 
